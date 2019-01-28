@@ -1,6 +1,11 @@
 float lag = 0.02;
 float x;
 float y;
+float dist1 = mouseX;
+float dist2 = x;
+float totalTime = 3;
+float distance = dist1 - dist2;
+float scaler = 0;
 
 PImage bunny;
 
@@ -9,6 +14,9 @@ void setup() {
   rectMode(CENTER);
 
   bunny = loadImage("Bunny.png");
+  
+  x = dist2;
+  totalTime *= 1000;
 }
 
 void draw()
@@ -36,4 +44,12 @@ void draw()
   //ellipse (x,y,50,50);
 
   image(bunny, x, y, bunny.width /2, bunny.height/2);
+  
+  //float currentTime = millis()%totalTime;
+  //if(currentTime > totalTime/2){
+  // currentTime = totalTime - currentTime; 
+  //}
+  //scaler = currentTime/(totalTime/2);
+  
+  //x = dist1 + distance * scaler;
 }
