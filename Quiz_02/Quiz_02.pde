@@ -1,4 +1,4 @@
-String displayQuote;
+String[] quotes = {"Hi", "Hello", ":')", "I tried"};
 
 int value1 = 200;
 int value2 = 130;
@@ -36,7 +36,9 @@ void draw() {
 
   textSize(42);
   fill(255); 
-  text ("Hi", 470, 350);
+for (int i = 0; i < quotes.length; i ++){ 
+  text (quotes[i], 470, 350);
+}
 }
 
 void mouseClicked() {
