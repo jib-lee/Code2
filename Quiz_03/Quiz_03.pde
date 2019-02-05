@@ -16,30 +16,27 @@ void setup() {
 }
 
 void draw() {
-  
-  
+ 
   for (int i = 0; i < rain.size(); i++) {
     rainGenerator g = rain.get(i);
     g.addRain();
     g.drawRain();
-    
-   rain.add(new rainGenerator((random(0, width)), height));
+  rain.add(new rainGenerator((random(0, width)), height));
   }
  
 }
 
+
 class rainParticle {
   float posX;
   float posY;
-  float velX;
   float velY;
   float r;
   float size;
 
   rainParticle(float posX, float posY) {
-    this.posX= posX;
+    this.posX=posX;
     this.posY = posY;
-    this.velX = 0;
     this.velY = 15;
     size = 15;
   }
@@ -62,7 +59,7 @@ class rainGenerator {
   float rate;
 
   rainGenerator(float posX, float posY) {
-    this.posX = random(0,width); 
+    this.posX = posX; 
     this.posY = posY;
     particles = new ArrayList<rainParticle>();
   }
