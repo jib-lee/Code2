@@ -1,3 +1,4 @@
+//Rain doesnt show up
 ArrayList<rainGenerator> rain;
 
 void setup() {
@@ -16,14 +17,13 @@ void setup() {
 }
 
 void draw() {
- 
+
   for (int i = 0; i < rain.size(); i++) {
     rainGenerator g = rain.get(i);
     g.addRain();
     g.drawRain();
-  rain.add(new rainGenerator((random(0, width)), height));
+    rain.add(new rainGenerator((random(0, width)), height));
   }
- 
 }
 
 
