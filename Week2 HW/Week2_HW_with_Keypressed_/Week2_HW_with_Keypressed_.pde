@@ -6,7 +6,7 @@ boolean right;
 boolean left;
 
 void setup() {
-  size(1200, 1000);
+  size(1800, 800);
   rectMode(CENTER);
 
   posX= 200;
@@ -27,6 +27,8 @@ void draw() {
   rotate(radians(angle2));
   carTwo(posXX, posYY);
   popMatrix();
+  
+  finishLine();
 
   if (up) {
     posY -= 5;
@@ -54,6 +56,8 @@ void draw() {
       posYY -= 5;
     }
   }
+  
+  
 }
 
 void keyPressed() {
@@ -88,4 +92,13 @@ void keyReleased() {
       left = false;
     }
   }
+}
+
+void finishLine(){
+  stroke(255, 0, 0);
+strokeWeight(5);
+  line(1700,0,1700,800);
+  textSize(40);
+  fill(255,0,0);
+  text("GOAL", 1570,700);
 }

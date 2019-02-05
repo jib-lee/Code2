@@ -1,11 +1,17 @@
 void carTwo(float x, float y) {
 rectMode(CENTER);
   noStroke();
-  fill(255, 0, 0);
+  fill(100, 255, 205);
   rect(x, y, 80, 140);
 
   rect(x + 46,y - 25, 12, 7);
   rect(x- 46, y-25, 12, 7);
+  
+  fill(30);
+  rect(x - 45, y -5, 10, 20);
+  rect(x + 45, y -5, 10, 20);
+  rect(x + 45, y + 50, 10, 20);
+  rect(x - 45, y + 50, 10, 20);
 
   stroke(0);
   strokeWeight(1);
