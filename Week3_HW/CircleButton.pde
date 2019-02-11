@@ -3,6 +3,7 @@ class CircleButton {
   int posX;
   int posY;
   int col;
+  boolean held;
 
   CircleButton(int posX, int posY, int size) {
     this.posX = posX;
@@ -12,7 +13,7 @@ class CircleButton {
   }
 
   void display() {
-    
+
     if (dist(mouseX, mouseY, posX, posY) < size/2) {
       fill(255);
     } else {
@@ -22,8 +23,11 @@ class CircleButton {
   }
 
   void update() {
-   
+    //if (dist(mouseX, mouseY, posX, posY) < size/2) {
+    //  fill(255);
+    //} else {
+    //  fill(col);
+    //}
   }
-  
   
 }

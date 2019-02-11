@@ -34,7 +34,4 @@ class FireworkButton {
     ellipse(x, y, w, h);
   }
 
-  boolean getButtonStatus() {  
-    return held;
-  }
 }
