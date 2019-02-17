@@ -8,23 +8,13 @@ SquareButton sq = new SquareButton(300, 250, 100);
 FireworkButton fr = new FireworkButton(500, 250, 50, 50);
 CircleButton c2 = new CircleButton(700, 150, 75);
 CircleButton c3 = new CircleButton(700, 350, 55);
-
-float bx;
-float by;
-int boxSize = 80;
-boolean overBox = false;
-boolean locked = false;
-float xOffset = 0.0; 
-float yOffset = 0.0; 
+DragButton d = new DragButton(900,150,80);
 
 void setup() {
   size (1000, 500);
   rectMode(CENTER);
 
   generators = new ArrayList<Generator>();
-
-  bx = 900;
-  by = 150;
 }
 
 void draw() {
@@ -58,70 +48,56 @@ void draw() {
   c2.update();
   c2.display();
 
-  //cant make it stay??
-  if (mousePressed && dist(mouseX, mouseY, 700, 150) < 75/2) {
-    c3.display();
-    c3.update();
-  }
-
-  // Test if the cursor is over the box 
-  if (mouseX > bx-boxSize && mouseX < bx+boxSize && 
-    mouseY > by-boxSize && mouseY < by+boxSize) {
-    overBox = true;
-  } else {
-    overBox = false;
-  }
-  fill(value4,110,value4);
-  rect(bx, by, boxSize, boxSize);
-  
   noFill();
   stroke(255);
-  rect(925, 370, boxSize + 10, boxSize + 10);
+  rect(925, 370, d.boxSize + 10, d.boxSize + 10);
   
-  if(bx < 930 && bx > 920 && by < 375 && by > 365){
-    value4 = 255;
-  } else {
-   value4 = 100; 
-  }
+  d.display();
 }
 
 void mouseClicked() {
-  if (value1 == 200 && dist(mouseX, mouseY, 100, 250) < 50) {
+  if (value1 == 200 && dist(mouseX, mouseY, c.posX, c.posY) < c.size/2) {
     value1 = 255;
   } else {
     value1 = 200;
   }
-  if (value2 == 130 && mouseX < 350 && mouseX > 250 && mouseY < 300 && mouseY > 200) {
+  if (value2 == 130 && mouseX < sq.posX + sq.size/2 & mouseX > sq.posY && mouseY < sq.posX && mouseY > sq.posY - sq.size/2) {
     value2 = 255;
   } else {
     value2 = 130;
   }
-  
-  if (value4 == 255){
+
+  if (value4 == 255) {
     lastBg = 45;
   } else {
-   lastBg = 185; 
+    lastBg = 185;
+  }
+
+//cant make it stay??
+  if (dist(mouseX, mouseY, c2.posX, c2.posY) < c2.size/2) {
+    c3.display();
+    c3.update();
   }
 }
 
 void mousePressed() {
-  if (overBox) { 
-    locked = true; 
+  if (d.overBox) { 
+    d.locked = true; 
     fill(255, 255, 255);
   } else {
-    locked = false;
+    d.locked = false;
   }
-  xOffset = mouseX-bx; 
-  yOffset = mouseY-by;
+  d.xOffset = mouseX-d.dx; 
+  d.yOffset = mouseY-d.dy;
 }
 
 void mouseDragged() {
-  if (locked) {
-    bx = mouseX-xOffset; 
-    by = mouseY-yOffset;
+  if (d.locked) {
+    d.dx = mouseX-d.xOffset; 
+    d.dy = mouseY-d.yOffset;
   }
 }
 
 void mouseReleased() {
-  locked = false;
+  d.locked = false;
 }
