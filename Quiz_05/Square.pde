@@ -9,10 +9,10 @@ class Square {
   color grey;
 
   float startTime, endTime;
-  float totalTime = 2;
+  float totalTime; // = 2;
   boolean isActive = false;
 
-  Square(int x, int y, int w, int h, String letter) {
+  Square(int x, int y, int w, int h, String letter, float time) {
     this.x = x;
     this.y = y;
     this.w = w;
@@ -21,6 +21,7 @@ class Square {
     pink = color (255, 200, 232);
     purple = color (230, 100, 215);
     grey = color (100);
+    this.totalTime = time; 
     totalTime *= 1000;
   }
 
