@@ -23,8 +23,6 @@ class SquareButton {
     rect(posX, posY, size, size);
   }
 
-  void update() {
-  }
 }
 
 

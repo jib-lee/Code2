@@ -2,8 +2,8 @@ CircleButton c = new CircleButton(100, 250, 100);
 SquareButton sq = new SquareButton(300, 250, 100);
 FireworkButton fr = new FireworkButton(500, 250, 50, 50);
 CircleButton c2 = new CircleButton(700, 150, 75);
-CircleButton c3 = new CircleButton(700, 350, 55);
-DragButton d = new DragButton(900,150,80);
+CircleButton c3; //= new CircleButton(700, 350, 55);
+DragButton d = new DragButton(900, 150, 80);
 
 void setup() {
   size (1000, 500);
@@ -29,22 +29,19 @@ void draw() {
   fill(d.bg);
   rect(900, 250, 200, 500);
 
-  c.update();
   c.display();
 
   sq.display();
-  sq.update();
-
+ 
   fr.display();
   fr.checkPressed();
 
-  c2.update();
   c2.display();
 
   noFill();
   stroke(255);
   rect(925, 370, d.boxSize + 10, d.boxSize + 10);
-  
+
   d.display();
 }
 
@@ -66,10 +63,10 @@ void mouseClicked() {
     d.bg = 185;
   }
 
-//cant make it stay??
+  //cant make it stay??
   if (dist(mouseX, mouseY, c2.posX, c2.posY) < c2.size/2) {
+    c3 = new CircleButton(700, 350, 55);
     c3.display();
-    c3.update();
   }
 }
 

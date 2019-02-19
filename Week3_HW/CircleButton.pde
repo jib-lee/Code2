@@ -24,8 +24,4 @@ int value;
     ellipse(posX, posY, size, size);
   }
 
-  void update() {
- 
-  }
-  
 }
