@@ -2,14 +2,17 @@ CircleButton c = new CircleButton(100, 250, 100);
 SquareButton sq = new SquareButton(300, 250, 100);
 FireworkButton fr = new FireworkButton(500, 250, 50, 50);
 CircleButton c2 = new CircleButton(700, 150, 75);
-CircleButton c3; //= new CircleButton(700, 350, 55);
+CircleButton c3 = new CircleButton(700, 350, 55);
 DragButton d = new DragButton(900, 150, 80);
+boolean isClicked;
 
 void setup() {
   size (1000, 500);
   rectMode(CENTER);
 
   generators = new ArrayList<Generator>();
+
+  isClicked = false;
 }
 
 void draw() {
@@ -23,7 +26,7 @@ void draw() {
   fill(55, 75, 250);
   rect(500, 250, 200, 500);
 
-  fill(10, 240, 130);
+  fill(10, c3.value, 130);
   rect(700, 250, 200, 500);
 
   fill(d.bg);
@@ -32,11 +35,15 @@ void draw() {
   c.display();
 
   sq.display();
- 
+
   fr.display();
   fr.checkPressed();
 
   c2.display();
+
+  if (isClicked) {
+    c3.display();
+  }
 
   noFill();
   stroke(255);
@@ -63,10 +70,14 @@ void mouseClicked() {
     d.bg = 185;
   }
 
-  //cant make it stay??
   if (dist(mouseX, mouseY, c2.posX, c2.posY) < c2.size/2) {
-    c3 = new CircleButton(700, 350, 55);
-    c3.display();
+    isClicked = true;
+  }
+
+  if (dist(mouseX, mouseY, c3.posX, c3.posY) < c3.size/2) {
+    c3.value = 255;
+  } else {
+    c3.value = 200;
   }
 }
 
