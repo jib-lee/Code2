@@ -3,12 +3,14 @@ class SquareButton {
   int posX;
   int posY;
   int col;
+  int value;
 
   SquareButton(int posX, int posY, int size) {
     this.posX = posX;
     this.posY = posY;
     this.size = size;
     this.col = 180;
+    value =130;
   }
 
   void display() {

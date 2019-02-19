@@ -1,8 +1,3 @@
-int value1 = 200;
-int value2 = 130;
-int value3 = 240;
-int value4 = 100;
-int lastBg = 185;
 CircleButton c = new CircleButton(100, 250, 100);
 SquareButton sq = new SquareButton(300, 250, 100);
 FireworkButton fr = new FireworkButton(500, 250, 50, 50);
@@ -18,26 +13,24 @@ void setup() {
 }
 
 void draw() {
-  //background(0);
 
-  fill(value1, 170, 220);
+  fill(c.value, 170, 220);
   rect (100, 250, 200, 500);
 
-  fill(200, 200, value2);
+  fill(200, 200, sq.value);
   rect (300, 250, 200, 500);
 
   fill(55, 75, 250);
   rect(500, 250, 200, 500);
 
-  fill(10, value3, 130);
+  fill(10, 240, 130);
   rect(700, 250, 200, 500);
 
-  fill(lastBg);
+  fill(d.bg);
   rect(900, 250, 200, 500);
 
   c.update();
   c.display();
-
 
   sq.display();
   sq.update();
@@ -56,21 +49,21 @@ void draw() {
 }
 
 void mouseClicked() {
-  if (value1 == 200 && dist(mouseX, mouseY, c.posX, c.posY) < c.size/2) {
-    value1 = 255;
+  if (c.value == 200 && dist(mouseX, mouseY, c.posX, c.posY) < c.size/2) {
+    c.value = 255;
   } else {
-    value1 = 200;
+    c.value = 200;
   }
-  if (value2 == 130 && mouseX < sq.posX + sq.size/2 & mouseX > sq.posY && mouseY < sq.posX && mouseY > sq.posY - sq.size/2) {
-    value2 = 255;
+  if (sq.value == 130 && mouseX < sq.posX + sq.size/2 & mouseX > sq.posY && mouseY < sq.posX && mouseY > sq.posY - sq.size/2) {
+    sq.value = 255;
   } else {
-    value2 = 130;
+    sq.value = 130;
   }
 
-  if (value4 == 255) {
-    lastBg = 45;
+  if (d.value == 255) {
+    d.bg = 45;
   } else {
-    lastBg = 185;
+    d.bg = 185;
   }
 
 //cant make it stay??
