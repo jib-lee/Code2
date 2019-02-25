@@ -58,7 +58,7 @@ void mouseClicked() {
   } else {
     c.value = 200;
   }
-  if (sq.value == 130 && mouseX < sq.posX + sq.size/2 & mouseX > sq.posY && mouseY < sq.posX && mouseY > sq.posY - sq.size/2) {
+  if (sq.value == 130 && mouseX < sq.posX + sq.size/2 && mouseX > sq.posY && mouseY < sq.posX && mouseY > sq.posY - sq.size/2) {
     sq.value = 255;
   } else {
     sq.value = 130;
