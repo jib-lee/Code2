@@ -23,6 +23,14 @@ void setup() {
 
 void draw() {
   background(140, 200, 250);
+  fill(255);
+  textSize(20);
+  text("Click to Blink", 20, 25);
+  text("Up Arrow to Jump", 20, 50);
+  text("Right Arrow to Walk", 20, 75);
+  noStroke();
+  fill(100, 250, 100);
+  rect(0, 430, width, height/2);
 
   if (clicked) {
     bl.display();
