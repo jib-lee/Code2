@@ -7,6 +7,7 @@ PImage sad;
 void setup() {
   size(800, 800);
   sad = loadImage("soSAD.png");
+  colorMode(HSB);
 }
 
 void draw() {
