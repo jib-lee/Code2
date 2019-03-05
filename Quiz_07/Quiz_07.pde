@@ -28,6 +28,13 @@ void draw () {
     pos.y = height - s/2 ;
   }
 
+  if (mousePressed) {
+    if (dist(mouseX, mouseY, pos.x, pos.y) < s/2) {
+      vel.x = mouseX - pmouseX;
+      vel.y = mouseY - pmouseY;
+    }
+  }
+
   noStroke();
   fill(250, 130, 180);
   ellipse (pos.x, pos.y, s, s);
