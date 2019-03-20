@@ -1,23 +1,43 @@
+//size
+int s = 250;
+//Hi
+boolean sayHi;
 //sky
 int numShapes = 100;
 float[] xPositions = new float [numShapes];
 float[] yPositions = new float [numShapes];
 
+Deer d;
+Deer d2;
 
 void setup() {
   size(1000, 800);
-  imageMode(CENTER);
-
+  sayHi = false;
   //sky
   for (int i = 0; i < xPositions.length; i ++) {         
     xPositions[i] = random(width);
     yPositions[i] = map(i, 0, yPositions.length, 50, height-620);
   }
+
+  d = new Deer(s, s);
+  d2 = new Deer (s, s);
+
+  imageMode(CENTER);
 }
 
 void draw() {
   drawSky();
   drawGrass();
+
+  d.displayCharacter();
+  d.update();
+  d2.displayCharacter();
+  d2.update();
+  
+  if (dist (d.pos.x, d.pos.y, d2.pos.x, d2.pos.y) < s){
+   //sayHi = !sayHi;
+   sayHi = true;
+  }
 }
 
 void drawSky() {
