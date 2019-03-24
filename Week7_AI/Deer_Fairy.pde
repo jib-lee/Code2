@@ -150,6 +150,16 @@ class Deer {
         STATE = KICK;
         frameNumber = 0;
       }
+      if (key == 'b') {
+        println("bloom");
+        STATE = BLOOM;
+        frameNumber = 0;
+      }
+      if (key == 's') {
+        println("split");
+        STATE = SPLIT;
+        frameNumber = 0;
+      }
     }
   }
 

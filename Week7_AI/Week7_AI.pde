@@ -1,5 +1,5 @@
 //size
-int s = 250;
+int s = 200;
 //Hi
 boolean sayHi;
 //sky
