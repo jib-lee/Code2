@@ -137,10 +137,19 @@ class Deer {
       velo = new PVector (-facingDirection * speed, 0);
       break;
     }
-    
-    if (sayHi){
+
+    if (sayHi) {
       STATE = HELLO;
       sayHi = false;  //only works on one deer?
+    }
+
+    //if Keypress...
+    if (keyPressed) {
+      if (key == 'k') {
+        println("kick");
+        STATE = KICK;
+        frameNumber = 0;
+      }
     }
   }
 

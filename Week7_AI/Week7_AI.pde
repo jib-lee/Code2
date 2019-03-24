@@ -49,7 +49,7 @@ void drawSky() {
     fill (map(i, 0, xPositions.length, 225, 255));
     ellipse (xPositions[i], yPositions[i], siz, siz);
 
-    xPositions[i] -= map(i, 0, xPositions.length, 1, 10);
+    xPositions[i] -= map(i, 0, xPositions.length, 5, 10);
 
     if (xPositions[i]< -siz/2) {
       xPositions[i] = width + siz/2;
