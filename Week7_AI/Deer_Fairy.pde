@@ -1,4 +1,6 @@
 class Deer {
+  //put boolean in here
+  
   int w;
   int h;
 
