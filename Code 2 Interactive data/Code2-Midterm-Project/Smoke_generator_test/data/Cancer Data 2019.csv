@@ -1,0 +1,28 @@
+,Estimated Deaths (Both Sexes),XPos,YPos,Emit
+Tongue,3020,409,214,3
+Mouth,2740,391,222,3
+Pharynx,3450,422,229,3
+Esophagus,16080,381,261,0.75
+Stomach,11140,369,361,1
+Small Intestine,1590,493,421,3
+Colon,51020,431,380,0.45
+Rectum,0,350,464,3
+Liver,31780,363,293,0.45
+Gallbladder,3960,370,417,3
+Pancreas,45750,318,361,0.45
+Larynx,3760,408,228,3
+Lung and Bronchus,3760,365,294,3
+Bones/Joints,1660,345,263,3
+Breast,42260,445,296,0.45
+Uterine Cervix,4250,453,476,1
+Uterine Corpus,12160,411,519,1
+Prostate,31620,358,414,0.45
+Urinary Bladder,17670,384,459,0.75
+Kidney,14770,432,351,1
+Ureter,980,444,371,3
+Eye,370,416,196,3
+Brain,17760,404,159,0.75
+Thyroid,2170,398,238,3
+Bones/Joints,1660,428,420,3
+Bones/Joints,1660,464,340,3
+Bones/Joints,1660,416,478,3

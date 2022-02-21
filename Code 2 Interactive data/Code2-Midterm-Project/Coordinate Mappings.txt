@@ -1,0 +1,27 @@
+404-159 -> Brain  17760
+416- 196 -> Eye   370
+409 - 214 -> Tongue  3020
+391 - 222 -> Mouth   2740
+398 - 238 -> Thyroid  2170
+408 - 228 -> Larynx 3760
+422 - 229 -> Pharynx  3450
+445- 296 -> Breast  42260
+365 - 294 -> Lung/Bronchus  3760
+381 - 261 -> Esophagus   16080
+345- 263 -> Bones/Joints 1660
+363 - 293 -> Liver   31780
+318 - 361 -> Pancreas  45750
+369 - 361 -> Stomach   11140
+432 - 351 -> Kidney  14770
+444 - 371 -> Ureter  980
+431 - 380 -> Colon   51020
+428 -420 -> Bones/ Joints 1660
+464 - 340 -> Bones/Joints 1660
+493 - 421 -> Small Intestine   1590
+370 - 417 -> Gallbladder  3960
+358 - 414 -> Prostate  31620
+350 - 464 -> Rectum  0
+384 - 459 -> Urinary Bladder  17670
+453 - 476 -> Uterine
+411 - 519 -> Cervix/Corpus 12160
+416 - 478 -> Bones/Joints 1660
